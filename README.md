@@ -43,7 +43,7 @@ Now that you have a Workspace, you need to ingest a data stream.
 
 3. That also created a new token to authorize append requests to the Data Source. In Tinybird, go to `Tokens` in the left navigation pane, select `app_append_token`, and click the `copy` icon to copy the token.
 
-4. To generate dummy data, you will use the open source tool Mockingbird to stream data to Tinybird's [Events API](https://www.tinybird.co/docs/ingest/events-api), an easy-to-use HTTP API that enables high-throughput streaming ingestion. Launch [Mockingbird](https://mockingbird.tinybird.co/?host=us_gcp&datasource=events_api&token=&eps=200&withLimit=on&limit=1000000&generator=Tinybird&endpoint=us_gcp&generatorName=Tinybird&template=Flappybird&schema=Preset), go to `Settings`, paste your token in the `Data Source API Token` input, and click `Save`.
+4. To generate dummy data, you will use the open source tool Mockingbird to stream data to Tinybird's [Events API](https://www.tinybird.co/docs/ingest/events-api), an easy-to-use HTTP API that enables high-throughput streaming ingestion. Launch [Mockingbird](https://mockingbird.tinybird.co/?host=us_gcp&datasource=events_api&token=&eps=100&withLimit=on&limit=1000000&generator=Tinybird&endpoint=us_gcp&generatorName=Tinybird&template=Flappybird&schema=Preset), go to `Settings`, paste your token in the `Data Source API Token` input, and click `Save`.
 
 5. Scroll down and click `Preview` to see a sample message. Then, scroll further and click `Start Generating!` to stream data to Tinybird.
 
