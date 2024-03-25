@@ -117,7 +117,7 @@ GROUP BY player_id, session_id
 
 4. In the top right, click the green arrow to open the dropdown list, select `Create Materialized View`, and choose the `mv` node.
 
-5. Rename it to `mv_player_stats`. Ensure that the Sorting Key is `player_id,session_id` (in that order). Click `Next` and `Create Materialized View`. You just created a new Materialized View that aggregates player scores in real-time!
+5. Rename it to `mv_player_stats`. Ensure that the Sorting Key is `player_id,session_id` (in that order). Click `Next`, select `Up to 2M rows`, and `Create Materialized View`. You just created a new Materialized View that aggregates player scores in real-time!
 
 6. Navigate back to the Pipe `mat_player_stats`. You'll notice that Tinybird automatically added the suffix `-State()` to the aggregate functions. This is how Tinybird keeps the Materialized View up-to-date in real-time; Tinybird saves the intermediate state of each aggregation.
 
