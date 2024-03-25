@@ -15,7 +15,7 @@ This repository contains a clone of Flappybird. It was built using the Phaser 3 
 
 ## Play the game!
 
-Test your skills by playing 🎮🐥 [Flappy Tinybird](https://flappy-workshop.tinybird.co/)!
+Test your skills by playing [Flappybird](https://flappy-workshop.tinybird.co/)! 🎮🐥 
 
 The goal of the game is to maneuver the bird through a challenging array of pipes, avoiding any collisions. The bird propels itself forward automatically, and you control its flight by either pressing the space bar, enter, or clicking on the screen to flap its wings. If you collide with a pipe, the ground, or the sky, it's game over!
 
@@ -36,7 +36,7 @@ Your Tinybird Workspace is set up and ready for action!
 
 ## Generate Dummy Data
 
-Now that you have a Workspace, you need to ingest a data stream. 
+Now that you have a Workspace, you need to ingest a data stream.  
 1. In this repo, navigate to `tinybird/datasources` and download the file `events_api.datasource`. This is the schema of your Data Source.
 
 2. Drag and drop the file into the Tinybird UI. Click `Import 1 resource` to import the Data Source.
@@ -45,11 +45,13 @@ Now that you have a Workspace, you need to ingest a data stream.
 
 4. To generate dummy data, you will use the open source tool Mockingbird to stream data to Tinybird's [Events API](https://www.tinybird.co/docs/ingest/events-api), an easy-to-use HTTP API that enables high-throughput streaming ingestion. Launch [Mockingbird](https://mockingbird.tinybird.co/?host=us_gcp&datasource=events_api&token=&eps=100&withLimit=on&limit=1000000&generator=Tinybird&endpoint=us_gcp&generatorName=Tinybird&template=Flappybird&schema=Preset), go to `Settings`, paste your token in the `Data Source API Token` input, and click `Save`.
 
-5. Scroll down and click `Preview` to see a sample message. Then, scroll further and click `Start Generating!` to stream data to Tinybird.
+> _Note_: The Mockingbird URL is pre-filled with the region and Data Source name from previous steps. Please take this into account if you wish to make any changes.
 
-6. Return to Tinybird, navigate to the `events_api` Data Source, and confirm that data is being ingested.
+6. Scroll down and click `Preview` to see a sample message. Then, scroll further and click `Start Generating!` to stream data to Tinybird.
 
-In just a few clicks, you set up streaming ingestion into Tinybird!
+7. Return to Tinybird, navigate to the `events_api` Data Source, and confirm that data is being ingested.
+
+🎊 In just a few clicks, you set up streaming ingestion into Tinybird!
 
 ## Build API Endpoints
 
@@ -57,7 +59,7 @@ Now that a data stream is flowing into Tinybird, the next step is to develop ove
 
 ### User-Facing Analytics
 
-For the first use case, you will build a user-facing analytics use case: an API that returns the top 10 scores 🏆 in a global leaderboard.
+For the first use case, you will build a user-facing analytics use case: an API that returns the top 10 scores in a global leaderboard. 🏆
 
 Click the `+` icon next to the Data Project section on the left navigation and select `Pipe`.
 1. Rename the pipe to `api_leaderboard`.
@@ -88,13 +90,13 @@ Copy the URL from the sample usage section and paste it into a new tab to make a
 
 > _Note_: This query was split into two nodes to demonstrate the notebook-style UX of Pipes, designed to simplify and accelerate your development. You can decide if you’d like to use one or multiple nodes; the Pipe is still executed as a single query.
 
-#### Optimize with Materialized Views
+#### Optimize with Materialized Views ⚙️
 
 The Pipe you just built queries the raw data from the `events_api` Data Source. The query is performant with a few thousand rows, but as your data scales up to millions or billions of rows, query performance will likely degrade.
 
 A powerful way to optimize queries in Tinybird is through real-time [Materialized Views](https://www.tinybird.co/docs/guides/materialized-views.html). With simple SQL logic, you can pre-aggregate and pre-filter large Data Sources incrementally, producing a more relevant Data Source with significantly fewer rows.
 
-Put simply, Materialized Views shift computational load from query time to ingestion time, so your endpoints stay blazing ⚡️ fast.
+Put simply, Materialized Views shift computational load from query time to ingestion time, so your endpoints stay fast. ⚡️
 
 Follow these steps to optimize your Endpoint with Materialized Views:
 1. Create a new Pipe and rename it `mat_player_stats`.
