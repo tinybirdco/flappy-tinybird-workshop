@@ -159,7 +159,7 @@ Click the `+` icon next to the Data Project section on the left navigation and s
 
 3. Since you’re already a Tinybird expert 🥇, try writing this query by yourself! The query should work like this:
 
-In the _last hour_, if a player _played 3 or more games_, scored _less than or equal to 15 points_, and made _0 purchases_, **return 1** (player receives an offer because they are struggling). Else, **return 0** (player does not receive an offer).
+In the _last hour_, if a player _played 3 or more games_, scored in _less than or equal to 15 games_, and made _0 purchases_, **return 1** (player receives an offer because they are struggling). Else, **return 0** (player does not receive an offer).
 
 4. Here are some tips:
 
