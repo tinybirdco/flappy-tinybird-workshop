@@ -132,7 +132,7 @@ SELECT
     session_id,
     countMerge(scores) AS scores,
     maxMerge(end_ts) AS end_ts
-FROM player_stats_mv
+FROM mv_player_stats
 GROUP BY player_id, session_id
 ORDER BY scores DESC
 LIMIT 10
