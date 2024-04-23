@@ -22,9 +22,9 @@ The goal of the game is to maneuver the bird through a challenging array of pipe
 ## Create a Tinybird Workspace
 
 To build real-time analytics into the game, you'll need to set up a Tinybird Workspace. Follow these steps:
-1. Click [this link](https://ui.us-east.tinybird.co/workspaces/new?name=flappy_workshop) to create a Tinybird Workspace.
+1. Click [this link](https://ui.tinybird.co/login) to log in or sign up to Tinybird.
 
-2. If prompted, log in or create a Tinybird account.
+2. Select your desired region.
 
 3. Give your Workspace a unique name.
 
